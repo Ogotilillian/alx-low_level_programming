@@ -3,20 +3,23 @@
 #include <time.h>
 
 /**
- * main - function to  print three combination.
+ * main - function to  print three combinations.
  *
- * Return : 0 success
+ * Return: 0 success
+ *
  */
 
 int main(void)
 {
-	int i, j, k;
+	int i = '0';
+	int j = '0';
+	int k = '0';
 
-	for (i = '0'; i < '9'; i++)
+	while (i <= '7')
 	{
-		for (j = i + 1; j <= '9'; j++)
+		while (j <= '8')
 		{
-			for (k = j + 1; k <= '9'; k++)
+			while (k <= '9')
 			{
 				if (i < j && j < k)
 				{
@@ -24,13 +27,20 @@ int main(void)
 					putchar(j);
 					putchar(k);
 					if (!(i == '7' && j == '8' && k == '9'))
-					continue;
-					putchar(',');
-					putchar(' ');
-					putchar('\n');
+					{
+						putchar(',');
+						putchar(' ');
+					}
+
 				}
+				k++;
 			}
+			k = '0';
+			j++;
 		}
+		j = '0';
+		i++;
 	}
+	putchar('\n');
 	return (0);
 }
