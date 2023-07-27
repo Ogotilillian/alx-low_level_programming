@@ -15,7 +15,7 @@
 char *leet(char *s)
 {
 	int i, j;
-	char leetLetters[] = "aAcCoOtTlL";
+	char leetLetters[] = "aAeEoOtTlL";
 	char leetNums[] = "4433007711";
 
 	/* scan through string */
