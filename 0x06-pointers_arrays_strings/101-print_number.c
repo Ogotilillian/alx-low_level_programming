@@ -14,7 +14,7 @@ void print_number(int n)
 	k = 0;
 	if (n < 0)
 	{
-		_putchar('.');
+		_putchar('-');
 		a = -n;
 	}
 	else
