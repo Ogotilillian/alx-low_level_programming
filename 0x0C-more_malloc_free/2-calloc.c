@@ -3,28 +3,31 @@
 #include <stdlib.h>
 
 /**
- * calloc - function that allocates memory for an array, using malloc
+ * _calloc - ...
  * @nmemb: An unsigned integer
  * @size: size of each element in bytes
- * Return: void
+ * Return: ...
  */
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	char *ptr;
-	int i;
+	int i = 0, j = 0;
 
 	if (nmemb == 0 || size == 0)
 	{
 		return (NULL);
 	}
-	size_t i = nmemb * size;
-	ptr = malloc(i);
+	j = nmemb * size;
+	ptr = malloc(j);
 	if (ptr == NULL)
 	{
 		return (NULL);
 	}
-	memset(ptr, 0, i);
+	while (i < j)
+	{
+		ptr[i] = 0;
+		i++;
+	}
 	return (ptr);
-
 }
